@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance - Attendance Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="attendance-container">
+        <nav>
+            <h2>Attendance Tracker</h2>
+            <ul>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/attendance">Mark Attendance</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+            {% if username %}
+            <div class="nav-username">Logged in as: {{ username }}</div>
+            {% endif %}
+        </nav>
+        <main>
+            <h1>Mark Attendance</h1>
+            <div class="attendance-form">
+                <button id="start-camera">Start Camera</button>
+                <video id="camera-feed" width="400" height="300"></video>
+                <button id="capture-photo">Capture Photo</button>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/attendance.js') }}"></script>
+</body>
+</html>

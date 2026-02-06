@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Attendance Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav>
+            <h2>Attendance Tracker</h2>
+            <ul>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/attendance">Mark Attendance</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Dashboard</h1>
+            {% if username %}
+            <p>Welcome, {{ username }} — to the Attendance Tracker Dashboard</p>
+            {% else %}
+            <p>Welcome to the Attendance Tracker Dashboard</p>
+            {% endif %}
+        </main>
+    </div>
+</body>
+</html>
