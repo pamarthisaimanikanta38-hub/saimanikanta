@@ -15,11 +15,20 @@
                 <li><a href="/attendance">Mark Attendance</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
+            {% if username %}
+            <div class="nav-username">Logged in as: {{ username }}</div>
+            {% endif %}
         </nav>
         <main>
             <h1>Dashboard</h1>
             {% if username %}
             <p>Welcome, {{ username }} — to the Attendance Tracker Dashboard</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Attendance</h3>
+                    <p class="stat-value">{{ attendance_count }}</p>
+                </div>
+            </div>
             {% else %}
             <p>Welcome to the Attendance Tracker Dashboard</p>
             {% endif %}
