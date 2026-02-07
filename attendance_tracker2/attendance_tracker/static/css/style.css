@@ -1,3 +1,9 @@
+.nav-username {
+    font-size: 14px;
+    color: #ddd;
+    margin-left: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -58,6 +64,12 @@ body {
     background-color: #764ba2;
 }
 
+.login-container p.error {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
 nav {
     background-color: #333;
     color: white;
@@ -86,7 +98,7 @@ nav a:hover {
     color: #667eea;
 }
 
-.dashboard-container, .attendance-container {
+dashboard-container, .attendance-container {
     display: flex;
     height: 100vh;
 }
@@ -122,7 +134,14 @@ main h1 {
     background-color: #764ba2;
 }
 
+.attendance-form button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
 #camera-feed {
     border: 2px solid #ddd;
     border-radius: 5px;
+    max-width: 100%;
+    height: auto;
 }
